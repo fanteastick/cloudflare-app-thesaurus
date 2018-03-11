@@ -17,12 +17,13 @@
       const selection = window.getSelection()
       const message = selection.toString()
       var string = ""
+      //var string2 = ""
       /*var noun = 0 // means false
       var verb = 0
       var adjective = 0
       var adverb = 0*/
       const span = document.createElement("span")
-
+      //const span2 = document.createElement("span")
       if (message) { //needs to be httpS or else it'll get mad and insecure XD
         fetch(`https://words.bighugelabs.com/api/2/cd528563d795dfe1c620323d697711cd/${message}/json`, { // objects inside of objects
             //headers is an object, holds 2 key value pairs
@@ -83,11 +84,14 @@
               //})
               //when words comes back, find each key, loop through each key, get synonyms, push all that into one really big string and put string in span
             }
-            //string += " " + array[0]
-            // + Object.values(words[array[1]]["syn"])
-          //words.adjective.sim.forEach(function(word){
-            //string += word + ", "
-            //})
+            /*for (var i = 0; i < array.length; i++) {
+                string += " " + message.toUpperCase() + " (" + array[i] + "):"
+                const arr2 = Object.values(words[array[i]]["sim"])
+                string += " " + arr2[0] + "\n"
+                span2.className = "CloudflareAppsAnts"
+                span2.innerText = string2
+
+              }*/
         })
         console.log(string)
 
