@@ -50,7 +50,7 @@
               if (verb || noun) {console.log(array[i]) + " tester"}*/
 
 
-              string += " " + message.toUpperCase() + " (" + array[i] + "):"
+              string += " \n" + message.toUpperCase() + " (" + array[i] + "):"
 
               // console.log("this is words[array[i]] " + words[array[i]]) prints [Object object]
               console.log("this is words[array[i]][\"ant\"] " + words[array[i]]["ant"]) //accesses synonyms, loop through this and add to string
