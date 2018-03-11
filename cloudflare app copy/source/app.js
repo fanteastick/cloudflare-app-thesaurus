@@ -58,10 +58,10 @@
         })
         console.log(string)
 
-        verb += 1
-        if (verb) {
-          console.log("hello again bb")
-        }
+        //verb += 1
+        //if (verb) {
+          //console.log("hello again bb")
+        //}
         //const aTag = document.createElement("a")
         //aTag.className = "CloudflareAppsWordSynonyms"
         //aTag.href = "https://twitter.com/intent/tweet?text=" + encodeURI(message) // change this
