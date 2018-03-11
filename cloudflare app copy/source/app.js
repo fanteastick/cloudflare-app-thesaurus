@@ -37,13 +37,12 @@
           //loop through the keys of an object
           const array = Object.keys(words)
           for (var i = 0; i < array.length; i++) {
-              console.log("ths is array[i] " + array[i]) // just accesses part of speech
 
-              console.log("this is words[array[i]] " + words[array[i]]) //access the whole object
+
+              //console.log("this is words[array[i]] " + words[array[i]]) //access the whole object
               console.log("this is words[array[i]][\"ant\"] " + Object.values(words[array[i]]["ant"])) //accesses synonyms, loop through this and add to string
               const arr2 = Object.values(words[array[i]]["syn"])
               console.log("synonyms for " + message.toLowerCase() + " are " + arr2)
-
 
 
               //words.words[array[i]].syn.forEach(function(werd){
@@ -59,10 +58,10 @@
         })
         console.log(string)
 
-        verb += 1
-        if (verb) {
-          console.log("hello again bb")
-        }
+        //verb += 1
+        //if (verb) {
+          //console.log("hello again bb")
+        //}
         //const aTag = document.createElement("a")
         //aTag.className = "CloudflareAppsWordSynonyms"
         //aTag.href = "https://twitter.com/intent/tweet?text=" + encodeURI(message) // change this
