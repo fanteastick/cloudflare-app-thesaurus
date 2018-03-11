@@ -55,7 +55,7 @@
               console.log("this is words[array[i]][\"ant\"] " + words[array[i]]["ant"]) //accesses synonyms, loop through this and add to string
               const arr2 = Object.values(words[array[i]]["syn"])
               console.log("synonyms for " + message.toLowerCase() + " are " + arr2)
-              string += " " + arr2[0]
+              string += " " + arr2[0] + "\n"
 
               span.className = "CloudflareAppsWordsHelp"
               span.innerText = string
@@ -108,7 +108,7 @@
     })
 
     document.body.addEventListener("mousedown", (event) => {
-      const tooltip = document.body.querySelector(".CloudflareAppsTweetThisTooltip")
+      const tooltip = document.body.querySelector(".CloudflareAppsWordsHelp")
       if (tooltip) {
         if (event.target.contains(tooltip.childNodes[0])) {
           return

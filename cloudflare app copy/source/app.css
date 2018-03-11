@@ -2,13 +2,13 @@ span.CloudflareAppsWordsHelp {
   position: relative;
   display: inline;
 }
-.CloudflareAppsWordsHelp span {
+.CloudflareAppsWordsHelp span{
   position: absolute;
   width:200px;
-  color: #FFFFFF;
-  background: #000000;
-  height: 35px;
-  line-height: 30px;
+  color: #000000;
+  background: #6DBDBF;
+  height: 50px;
+  line-height: 25px;
   text-align: center;
   visibility: hidden;
   border-radius: 6px;
@@ -20,7 +20,7 @@ span.CloudflareAppsWordsHelp {
   margin-right: auto;
   z-index: 999;
 }
-span.CloudflareAppsWordsHelp span:after {
+.CloudflareAppsWordsHelp after {
   content: '';
   position: absolute;
   top: 100%;
