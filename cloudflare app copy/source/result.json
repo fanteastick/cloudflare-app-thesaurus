@@ -9,3 +9,5 @@ const words = {
     }
 }
 words.adjective.syn[1]
+
+console.log("ths is array[i] " + array) just accesses part of speech
