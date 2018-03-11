@@ -40,7 +40,7 @@
               console.log("ths is array[i] " + array[i]) // just accesses part of speech
 
               console.log("this is words[array[i]] " + words[array[i]]) //access the whole object
-              console.log("this is words[arjray[i]][\"sim\"] " + words[array[i]]["sim"]) //accesses synonyms, loop through this and add to string
+              console.log("this is words[array[i]][\"ant\"] " + Object.values(words[array[i]]["ant"])) //accesses synonyms, loop through this and add to string
               const arr2 = Object.values(words[array[i]]["syn"])
               console.log("synonyms for " + message.toLowerCase() + " are " + arr2)
 
