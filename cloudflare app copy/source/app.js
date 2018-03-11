@@ -17,8 +17,10 @@
       const selection = window.getSelection()
       const message = selection.toString()
       var string = ""
-      var noun = 0 // means false
+      /*var noun = 0 // means false
       var verb = 0
+      var adjective = 0
+      var adverb = 0*/
       const span = document.createElement("span")
 
       if (message) { //needs to be httpS or else it'll get mad and insecure XD
@@ -37,31 +39,62 @@
           //loop through the keys of an object
           const array = Object.keys(words)
           for (var i = 0; i < array.length; i++) {
+              console.log("This is array[i] " + array[i]) // just accesses part of speech
+
+              /*if (array[i] == "noun") {noun += 1} //big if statement
+              else if (array[i] == "verb") { verb += 1}
+              else if (array[i] == "adjective") {adjective += 1}
+              else if (array[i] == "adverb") {adverb += 1}
+
+              if (verb || noun) {console.log(array[i]) + " tester"}*/
 
 
-              //console.log("this is words[array[i]] " + words[array[i]]) //access the whole object
-              console.log("this is words[array[i]][\"ant\"] " + Object.values(words[array[i]]["ant"])) //accesses synonyms, loop through this and add to string
+              string += " " + message.toUpperCase() + " (" + array[i] + "):"
+
+              // console.log("this is words[array[i]] " + words[array[i]]) prints [Object object]
+              console.log("this is words[array[i]][\"ant\"] " + words[array[i]]["ant"]) //accesses synonyms, loop through this and add to string
               const arr2 = Object.values(words[array[i]]["syn"])
               console.log("synonyms for " + message.toLowerCase() + " are " + arr2)
+              string += " " + arr2[0]
 
-
+              /*var person = prompt("Please choose one", "Syn, Ant, Sim, Ant").
+              console.log(words[array[i]][person] + " heyo")
+              */
+              /*var text;
+              var favDrink = prompt("What's your favorite cocktail drink?");
+              switch(favDrink) {
+                  case "Martini":
+                      text = "Excellent choice! Martini is good for your soul.";
+                      break;
+                  case "Daiquiri":
+                      text = "Daiquiri is my favorite too!";
+                      break;
+                  case "Cosmopolitan":
+                      text = "Really? Are you sure the Cosmopolitan is your favorite?";
+                      break;
+                  default:
+                      text = "I have never heard of that one..";
+                      break;
+              }*/
               //words.words[array[i]].syn.forEach(function(werd){
                 //string += werd + ", "
               //})
               //when words comes back, find each key, loop through each key, get synonyms, push all that into one really big string and put string in span
             }
+            //string += " " + array[0]
             span.className = "CloudflareAppsWordsHelp"
-            span.innerText = "hello "// + Object.values(words[array[1]]["syn"])
+            span.innerText = string// + Object.values(words[array[1]]["syn"])
           //words.adjective.sim.forEach(function(word){
             //string += word + ", "
             //})
         })
         console.log(string)
 
-        //verb += 1
-        //if (verb) {
-          //console.log("hello again bb")
-        //}
+        /*verb += 1
+        if (verb) {
+          console.log("hello again bb")
+        }*/
+
         //const aTag = document.createElement("a")
         //aTag.className = "CloudflareAppsWordSynonyms"
         //aTag.href = "https://twitter.com/intent/tweet?text=" + encodeURI(message) // change this
