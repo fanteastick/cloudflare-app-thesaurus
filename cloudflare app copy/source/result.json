@@ -1,0 +1,11 @@
+const words = {
+  "adjective":{
+    "syn":["reddish","ruddy","blood-red","carmine","cerise","cherry","cherry-red","crimson","ruby","ruby-red","scarlet","violent","reddened","red-faced","flushed"],
+    "sim":["bloody","chromatic","colored","colorful","coloured"]
+  },
+    "noun":{
+      "syn":["redness","Red","Red River","Bolshevik","Marxist","bolshie","bolshy","loss","red ink","amount","amount of money","chromatic color","chromatic colour","radical","river","spectral color","spectral colour","sum","sum of money"],
+      "ant":["gain"]
+    }
+}
+words.adjective.syn[1]
